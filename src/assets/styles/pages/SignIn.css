@@ -1,0 +1,124 @@
+.SignIn{
+    
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../images/background.jpg");
+    background-size: 100% 120%;
+    background-clip: contain;
+}
+.conteiner {
+    width: 50%;
+    align-items: center;
+    padding: 5% 0;
+    text-align: center;
+    
+}
+
+.title-form {
+    margin-top: 5%;
+    text-align: center;
+    font-weight: bolder;
+    
+}
+
+.form-conteiner {
+    width: 70%;
+    align-items: center;
+    border:1px solid white;
+    border-radius: 12px;
+    background-color:white;
+    padding: 2.5% 0;
+    margin:2.5% 0 0 110%;
+    box-shadow: 4px 4px 8px 0   rgba(129, 128, 128, 0.795);
+    
+}
+
+
+.login-conteiner {
+    
+    display: inline-block;
+    align-items: center;
+    width: 60%;
+    height: 40vh;
+    margin: 5% 20%;
+
+}
+
+
+
+.login-conteiner .login-text {
+    margin: 10%;
+    padding: .5%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-bottom: 3px solid steelblue;
+    width: 80%;
+    height: 15%;
+    outline: none;
+}
+
+.login-text:active {
+    border: none;
+    color: steelblue;
+}
+
+.login-button {
+    border: 1px solid;
+    width: 45%;
+    height: 15%;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 8% 27.5%;
+
+}
+
+
+.login-with{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-with_links{
+    margin-left:2%;
+}
+
+.login-with_links:hover{
+    cursor: pointer;
+}
+
+.login-with_links--logo{
+    width: 35px;
+    height: 35px;
+}
+
+
+.register-text {
+    margin-top: 5%;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+a {
+    font-size: 15px;
+    margin-bottom:10px;
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: underline;
+
+}
+
+.img-conteiner {
+    width: 100%;
+    border-radius:5px;
+    margin-right: 0;
+}
+

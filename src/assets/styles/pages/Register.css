@@ -1,0 +1,111 @@
+.main{
+    display:flex;
+    background-image: url('../../images/background.jpg');
+    background-size: cover;
+    background-position: left;
+}
+.text-conteiner {
+    
+    width: 50%;
+    height: 90vh;
+}
+
+.text-conteiner p {
+    font-size: 20px;
+    color:whitesmoke;
+    
+   
+}
+
+.text-conteiner h1{
+    margin-left:60px;
+    color:whitesmoke;
+    font-size: 80px;
+    margin-top:250px;
+    margin-bottom:50px;
+}
+
+
+.form-conteiner-register{
+    width: 50%;
+    height: 100vh;
+    
+}
+.form{
+    border: 1px solid black;
+    background:white;
+    border-radius: 10px;
+    width: 50%;
+    height: 70vh;
+    margin-top:10%;
+    margin-left:25%;
+    
+
+}
+.register-conteiner{
+
+    display:inline-block;
+    width: 80%;
+    height: 45vh;
+    justify-items: center;
+    align-items: center;
+    margin-top:8%;
+    margin-left:35px;
+    margin-bottom: -20%;
+}
+.form-conteiner .title-register {
+    display:block;
+    justify-items: center;
+    align-items: center;
+    margin-top:80%;
+    margin-left:4px;
+    font-weight: bold;
+}
+
+.register-input{
+    width: 99%;
+    height: 28px;
+    border-radius:5px;
+    margin:2.5% 0 2.5% 0;
+    padding-left:2px;
+    border: 1px solid steelblue;
+}
+.check{
+    margin-right: 10px;
+}
+
+.send-register{
+    width: 80%;
+    height:15vh;
+    margin-left:35px; 
+    margin-top:15px;
+    
+}
+
+.send-register p{
+    
+    font-size: 12px;
+    text-align: center;
+   
+}
+
+.register-btn{
+    border: none;
+    height: 50%;
+    width: 100%;
+    margin-top:16px;
+    border-radius: 10px;
+    padding:5px;
+    background: steelblue;
+    color: white;
+    outline: none;
+}
+
+.register-btn:hover{
+    cursor: pointer;
+}
+
+
+.title-register .register-text{
+    display:block;
+}

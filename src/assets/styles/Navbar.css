@@ -72,6 +72,10 @@
     display:none;
   }
 
+  .show{
+    transition: ease-out ;
+  }
+
   .search_container--searcher .search-img{
     margin: 7% 2.5%;
     height: 30px;

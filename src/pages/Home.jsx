@@ -8,9 +8,6 @@ const Home = () => (
        <div>
             <Navbar />
             <main>
-                <section className="header conteiner">   
-                    
-                </section> 
                 <section>
                     <div className = "us">
                         <div className= "us-container">
