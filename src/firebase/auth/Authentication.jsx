@@ -1,15 +1,18 @@
 import React from 'react' 
+import { Redirect } from 'react-router-dom'
 
 import firebase from 'firebase/app'
 import 'firebase/auth'
-export default {
 
+const swal = require('sweetalert2')
+
+export default {
         AuthGoogleAccount: () => {
                 const provider = new firebase.auth.GoogleAuthProvider()
                 firebase.auth()
                         .signInWithPopup(provider)
                         .then(result => {
-                                alert(`Bienvenido ${result.user.displayName} !!`)
+                                <Redirect to="/"/>
                         })
                         .catch(error => {
                                 console.log(error)
@@ -42,30 +45,6 @@ export default {
                                 console.error(error)
                                 alert(error.message)
                         })
-        },
-
-        CreateAccount: (email, password, nombres) => {
-                firebase.auth()
-                        .createUserWithEmailAndPassword(email, password)
-                        .then(result => {
-                                result.user.updateProfile({
-                                        displayName: nombres
-                                })
-                                const config = {
-                                        url: 'http://localhost:5500'
-                                }
-                                result.user.sendEmailVerification(config)
-                                        .catch(error => {
-                                                console.log(error)
-                                                alert(error.message)
-                                        })
-                                firebase.auth().signOut()
-                                alert(`Bienvenido ${nombres}, por favor, haz el proceso de verificación `)
-                        })
-                        .catch(error => {
-                                console.error(error)
-                                alert(error.message)
-                        }) 
-
         }
+
 }

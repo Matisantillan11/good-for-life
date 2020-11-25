@@ -4,20 +4,18 @@
     background-size: cover;
     background-position: left;
 }
-.text-conteiner {
+.text-conteiner-register {
     
     width: 50%;
     height: 90vh;
 }
 
-.text-conteiner p {
+.text-conteiner-register p {
     font-size: 20px;
     color:whitesmoke;
-    
-   
 }
 
-.text-conteiner h1{
+.text-conteiner-register h1{
     margin-left:60px;
     color:whitesmoke;
     font-size: 80px;
@@ -29,7 +27,7 @@
 .form-conteiner-register{
     width: 50%;
     height: 100vh;
-    
+    margin-left:50%;
 }
 .form{
     border: 1px solid black;

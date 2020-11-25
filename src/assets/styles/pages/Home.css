@@ -4,19 +4,17 @@
 .us{
     width: 100vw;
     height: 85vh;
-    margin-top:50px;
-    
 }
 
 .us-container{
     margin: 0;
     padding: 0;
     display:flex;
-    justify-content: space-evenly;
     align-items:center;
-    height: 75vh;
+    height: 100vh;
     background-image: url('../../images/wrapper.jpg');
-    background-size: cover;
+    background-size: 100% 150%;
+    background-position-y: 70%;
     background-repeat: no-repeat;
 }
 
@@ -87,7 +85,7 @@
     0%{
         transform: scale(1);
     }100%{
-    transform: scale(1.04);
+    transform: scale(1.1);
     }
 }
 }
