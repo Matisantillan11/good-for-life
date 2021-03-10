@@ -1,5 +1,5 @@
-import React from 'react'
-import {Link , Redirect} from 'react-router-dom'
+import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
 
 import logonav from '../assets/images/logo.svg'
 import search from '../assets/images/search.png'
@@ -7,43 +7,34 @@ import search from '../assets/images/search.png'
 import firebase from 'firebase/app'
 import 'firebase/auth'
 
-import swal from 'sweetalert2'
-
-
 import '../assets/styles/Navbar.css'
-const Navbar = () => {
-        const userState = firebase.auth().onAuthStateChanged(user =>{
-                
+
+class Navbar extends Component {
+    
+    
+    componentWillMount(){
+        
+        firebase.auth().onAuthStateChanged(user =>{
+            const btnNav = document.getElementById('btnSignIn')
             if(user){
-                <Redirect to="/" />
-                swal.fire({
-                    icon:'success',
-                    title: `Bienvenido ${user.displayName}`,
-                    text: 'Has ingresado correctamente'
-                })
+                btnNav.innerHTML = "Salir"
+                btnNav.onclick = this.handleLogOut
             }
         })
-
-        const user = firebase.auth().currentUser
-
-        const SignOut = () =>{
-            
-            if (userState){
-                firebase.auth().signOut().then(()=>{
-                    swal.fire({
-                        icon: 'success',
-                        title: 'Te esperamos pronto',
-                        text: 'Cierre de sesión exitoso'
-                    })
-                }).catch(error =>{
-                    swal.fire({
-                        icon: 'error',
-                        title: 'Ops...',
-                        text: `${error}`
-                    })
-                })
-            }
+    }
+    
+    handleLogOut = () =>{
+        firebase
+        .auth()
+        .signOut()
+        .then((result) => {
+            window.location.href = "/";
+        })
+        .catch((error) => console.log(`Error ${error.code}: ${error.message}`));
         }
+    
+    render(){
+
         return(
             <div>
                 <header className = "navbar"> 
@@ -61,10 +52,11 @@ const Navbar = () => {
                                         <input placeholder="¿Qué estás buscando?"className="search"type="text"/>
                                         <img className="search-img"src={search} alt="Search icon"/>
                                     </div>
-                                    <Link onClick = {SignOut} id="btnSignIn" className="button-navbar" to="/SignIn">{user ? 'Iniciar' : 'Salir'}</Link>      
+                                    <Link id="btnSignIn" className="button-navbar" to="/SignIn">Iniciar</Link> 
                                 </div>
                             </header>    
             </div>
         )}
+    }
 
 export default Navbar

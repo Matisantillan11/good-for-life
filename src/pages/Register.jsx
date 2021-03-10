@@ -4,7 +4,6 @@ import {Redirect} from 'react-router-dom'
 import "../assets/styles/pages/Register.css"
 
 import firebase from 'firebase/app'
-import auth from "../firebase/auth/Authentication"
 
 import swal from 'sweetalert2'
 
@@ -13,16 +12,10 @@ import facebook_logo from "../assets/images/facebook.svg"
 import google_logo from "../assets/images/google.svg"
 
 const Register = () => {
-    const swal = require('sweetalert2')
-    const [names, setNames] = useState('')
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
     
-    const submit = () =>{
-        console.log(email, password)
-    }
-
-    const CreateAccount = async () => {
+    
+    
+    /* const CreateAccount = async () => {
         await firebase.auth()
                 .createUserWithEmailAndPassword(email, password)
                 .then(result => {
@@ -56,7 +49,7 @@ const Register = () => {
                     })
                 }) 
 
-}
+} */
 
     return (
         <div className="main">
@@ -66,21 +59,21 @@ const Register = () => {
                 <label className="title-register">
                 Username
                 <input 
-                onChange = {(ev) => setNames(ev.target.value)}
+                
                 className="register-input" 
                 type="text" />
                 </label>
                 <label className="title-register">
                 Email
                 <input 
-                onChange = {(ev) => setEmail(ev.target.value)}
+                
                 className="register-input email"
                 type="email" />
                 </label>
                 <label className="title-register">
                 Contraseña
                 <input 
-                onChange = {(ev) => setPassword(ev.target.value)}
+                
                 className="register-input" 
                 type="password" />
                 </label>
@@ -90,21 +83,21 @@ const Register = () => {
                 </label>
             </div>
             <div className="login-with">
-                <a onClick={auth.AuthGoogleAccount} className="login-with_links">
+                <a className="login-with_links">
                 <img
                     className="login-with_links--logo"
                     src={google_logo}
                     alt="Logo google"
                 />
                 </a>
-                <a  onClick={auth.AuthFacebookAccount}  className="login-with_links">
+                <a  className="login-with_links">
                 <img
                     className="login-with_links--logo"
                     src={facebook_logo}
                     alt="Logo facebook"
                 />
                 </a>
-                <a onClick={auth.AuthTwitterAccount}  className="login-with_links">
+                <a  className="login-with_links">
                 <img
                     className="login-with_links--logo"
                     src={twitter_logo}
@@ -118,7 +111,7 @@ const Register = () => {
                 una letra mayúscula
                 </p>
                 <input
-                onClick={CreateAccount}
+            
                 className="register-btn"
                 type="button"
                 value="Registrarse en GoodForLife"

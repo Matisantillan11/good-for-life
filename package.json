@@ -12,6 +12,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "reactfire": "^2.0.0-canary.68cfc79",
+    "sweetalert2": "^10.12.6",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
